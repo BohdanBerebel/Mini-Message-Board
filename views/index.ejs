@@ -10,10 +10,12 @@
     <ul>
       <% messages.forEach((item, idx) => { %>
       <li>
-        <h2><%= item.user %></h2>
+        <h2><%= item.username %></h2>
         <p><%= item.text %></p>
-        <p><%= item.added %></p>
-        <a href=<%= `message/${idx}` %> >Look details</a>
+        <p><%= item.date %></p>
+        <a href=<%= `message/${item.id}` %> >Look details</a>
+        <a href=<%= `message/delete/${item.id}` %> >Delete</a>
+
       </li>
       <% }) %>
     </ul>
